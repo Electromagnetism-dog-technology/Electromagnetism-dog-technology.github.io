@@ -1,0 +1,31 @@
+//ShowBorderLayout.java:Demonstrate using BorderLayout
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.Container;
+import java.awt.BorderLayout;
+
+public class ShowBorderLayout extends JFrame
+{
+  public ShowBorderLayout()
+  {
+   Container container=getContentPane();
+   
+   container.setLayout(new BorderLayout(5,10));
+   
+   container.add(new JButton("伍缘杰"),BorderLayout.EAST);
+   container.add(new JButton("杨镇宇"),BorderLayout.SOUTH);
+   container.add(new JButton("肖宇驰"),BorderLayout.WEST);
+   container.add(new JButton("高攀"),BorderLayout.NORTH);
+   container.add(new JButton("孙睿哲"),BorderLayout.CENTER);
+   
+  }
+  
+  public static void main(String[] args)
+  {
+   ShowBorderLayout frame=new ShowBorderLayout();
+   frame.setTitle("Show BorderLayout");
+   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   frame.setSize(300,200);
+   frame.setVisible(true);
+  }
+}
